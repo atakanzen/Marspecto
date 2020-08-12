@@ -1,7 +1,9 @@
 <template>
   <div>
-    <div class="flex flex-col bg-black w-full justify-center items-center p-4">
-      <div class="flex items-center">
+    <div
+      class="flex flex-row bg-black bg-opacity-75 w-full justify-center items-center p-3 divide-x"
+    >
+      <div class="flex items-center px-3">
         <a
           href="https://api.nasa.gov/#MarsPhotos"
           target="_blank"
@@ -12,7 +14,8 @@
           { APIs }
         </a>
       </div>
-      <div class="flex items-center">
+
+      <div class="px-3">
         <a
           href="#"
           class="text-base text-white tracking-widest"

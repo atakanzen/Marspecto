@@ -1,5 +1,5 @@
 <template>
-  <div class="background">
+  <div class="background bg-auto">
     <Navbar />
     <Nuxt />
     <Footer />

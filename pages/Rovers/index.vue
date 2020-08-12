@@ -1,5 +1,7 @@
 <template>
-  <div class="flex flex-col md:flex-row h-screen justify-evenly items-center p-6 overflow-auto">
+  <div
+    class="flex flex-col lg:flex-row justify-between items-center p-10 space-y-12 lg:space-y-0 lg:space-x-12 overflow-auto"
+  >
     <Curiosity />
     <Opportunity />
     <Spirit />
