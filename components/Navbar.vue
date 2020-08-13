@@ -1,20 +1,11 @@
 <template>
-  <nav
-    class="flex relative w-full bg-black bg-opacity-75 justify-between p-3 items-center divide-x divide-orange-800"
-  >
-    <div class="items-center flex-shrink-0 text-white mr-6">
-      <nuxt-link
-        to="/"
-        class="font-semibold text-2xl text-orange-600 tracking-widest underline"
-      >Marspecto</nuxt-link>
+  <nav class="navbar divide-x divide-orange-800">
+    <div class="links">
+      <nuxt-link to="/" class="homelink">Marspecto</nuxt-link>
     </div>
     <div class="inline-flex flex-grow">
-      <nuxt-link
-        to="/rovers"
-        v-on:click.prevent="toggle"
-        class="flex p-2 m-2 text-xl text-white"
-      >Rovers</nuxt-link>
-      <nuxt-link to="/search" class="flex p-2 m-2 text-xl text-white">Search</nuxt-link>
+      <nuxt-link to="/rovers" v-on:click.prevent="toggle" class="link">Rovers</nuxt-link>
+      <nuxt-link to="/search" class="link">Search</nuxt-link>
     </div>
   </nav>
 </template>
@@ -28,8 +19,20 @@ export default {
 }
 </script>
 
-<style >
+<style scoped >
 .nuxt-link-active {
   @apply underline;
+}
+.navbar {
+  @apply flex relative w-full bg-black bg-opacity-75 justify-between p-3 items-center;
+}
+.links {
+  @apply items-center flex-shrink-0 text-white mr-6;
+}
+.homelink {
+  @apply font-semibold text-2xl text-orange-600 tracking-widest underline;
+}
+.link {
+  @apply flex p-2 m-2 text-xl text-white;
 }
 </style>

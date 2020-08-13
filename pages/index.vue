@@ -6,9 +6,9 @@
       src="../static/img/cover.jpg"
       alt="Curiosity on Mars"
     />
-    <div class="absolute flex flex-col p-6 md:pl-20 divide-y">
-      <div class="text-white text-5xl font-hairline tracking-widest">Welcome to Marspecto.</div>
-      <div class="text-white text-4xl font-hairline tracking-widest">satisfy your curiosity</div>
+    <div class="label md:pl-20 divide-y">
+      <div class="welcome text-5xl">Welcome to Marspecto.</div>
+      <div class="welcome text-4xl">satisfy your curiosity</div>
     </div>
   </div>
 </template>
@@ -18,9 +18,11 @@ export default {}
 </script>
 
 <style>
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-@apply min-h-screen flex justify-center items-center text-center mx-auto;
+.label {
+  @apply absolute flex flex-col p-6;
 }
-*/
+
+.welcome {
+  @apply text-white font-hairline tracking-widest;
+}
 </style>
