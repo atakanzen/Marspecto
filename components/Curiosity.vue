@@ -1,5 +1,7 @@
 <template>
-  <div v-if="this.loading"></div>
+  <div v-if="this.loading">
+    <Spinner />
+  </div>
   <div v-else>
     <div class="card">
       <div class="px-2 py-2">
@@ -40,9 +42,13 @@
 
 <script>
 import axios from 'axios'
+import Spinner from './Spinner'
 
 export default {
   name: 'Curiosity',
+  components: {
+    Spinner,
+  },
   data() {
     return {
       rover: {},
