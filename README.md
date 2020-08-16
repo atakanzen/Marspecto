@@ -1,4 +1,4 @@
-# marsimagery
+# Marspecto
 
 ## Build Setup
 
@@ -17,4 +17,4 @@ $ npm run start
 $ npm run generate
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+A **Vue.js** project, that helps to search all of the photos that was taken on Mars by the NASA rovers.

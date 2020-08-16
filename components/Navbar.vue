@@ -4,19 +4,17 @@
       <nuxt-link to="/" class="homelink">Marspecto</nuxt-link>
     </div>
     <div class="inline-flex flex-grow">
-      <nuxt-link to="/rovers" v-on:click.prevent="toggle" class="link">Rovers</nuxt-link>
+      <nuxt-link to="/rovers" class="link">Rovers</nuxt-link>
       <nuxt-link to="/search" class="link">Search</nuxt-link>
+      <nuxt-link to="/about" class="link">About</nuxt-link>
     </div>
   </nav>
 </template>
 
 <script>
 export default {
-  name: 'Navbar',
-  methods: {
-    toggle: function (e) {},
-  },
-}
+  name: "Navbar",
+};
 </script>
 
 <style scoped >

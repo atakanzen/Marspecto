@@ -14,7 +14,12 @@
       </div>
 
       <div class="px-3">
-        <a href="#" class="author" target="_blank" rel="noopener noreferrer">Atakan Zengin</a>
+        <a
+          href="https://twitter.com/atakanzzengin"
+          class="author"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Atakan Zengin</a>
       </div>
     </div>
   </div>

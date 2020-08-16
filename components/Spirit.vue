@@ -12,19 +12,19 @@
         <p class="launch-date">Landing Date: {{ rover.landing_date }}</p>
       </div>
       <div v-if="rover.status === 'active'">
-        <div class="status">
+        <div class="status text-green-500">
           <span class="text-white">Status:</span>
           {{ rover.status }}
         </div>
       </div>
       <div v-else>
-        <div class="status">
+        <div class="status text-red-600">
           <span class="text-white">Status:</span>
           {{ rover.status }}
         </div>
       </div>
       <div class="max-dates divide-x">
-        <div class="max-date">Max Marsian Sol: {{ rover.max_sol }}</div>
+        <div class="max-date">Max Martian Sol: {{ rover.max_sol }}</div>
         <div class="max-date">Max Earth Date: {{ rover.max_date }}</div>
       </div>
       <div class="photos">Total Photos: {{ rover.total_photos }}</div>
@@ -41,11 +41,11 @@
 </template>
 
 <script>
-import axios from 'axios'
-import Spinner from './Spinner'
+import axios from "axios";
+import Spinner from "./Spinner";
 
 export default {
-  name: 'Spirit',
+  name: "Spirit",
   components: {
     Spinner,
   },
@@ -53,21 +53,21 @@ export default {
     return {
       rover: {},
       loading: true,
-    }
+    };
   },
   async created() {
     try {
       const res = await axios.get(
-        'https://mars-photos.herokuapp.com/api/v1/rovers/Spirit/'
-      )
+        "https://mars-photos.herokuapp.com/api/v1/rovers/Spirit/"
+      );
 
-      this.rover = res.data.rover
-      this.loading = false
+      this.rover = res.data.rover;
+      this.loading = false;
     } catch (err) {
-      console.log(err)
+      console.log(err);
     }
   },
-}
+};
 </script>
 
 <style scoped>
@@ -88,7 +88,7 @@ export default {
 }
 
 .status {
-  @apply text-lg text-green-500 capitalize border border-t-0 border-b-0 p-2;
+  @apply text-lg  capitalize border border-t-0 border-b-0 p-2;
 }
 
 .max-dates {

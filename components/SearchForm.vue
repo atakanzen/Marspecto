@@ -2,7 +2,7 @@
   <div>
     <div v-if="this.photos.length === 0">
       <div class="flex flex-col w-screen items-center">
-        <form v-on:submit.prevent="getPhotos" class="search-form lg:w-1/2 w-screen space-y-4">
+        <form v-on:submit.prevent="getPhotos" class="search-form lg:w-1/2 w-screen space-y-2">
           <label for="rover" class="form-label">Rover</label>
           <select
             name="rover"
@@ -15,6 +15,9 @@
             <option value="spirit">Spirit</option>
           </select>
           <label for="sol" class="form-label">Sol</label>
+          <span
+            class="text-orange-400 text-sm text-opacity-75 font-light"
+          >You can check Rovers page for the latest Sol</span>
           <input
             type="text"
             id="sol"
@@ -26,8 +29,14 @@
         </form>
       </div>
     </div>
-    <div v-else>
-      <Photos v-bind:photos="this.photos" />
+    <div v-else class="flex flex-col h-screen">
+      <Photos :photos="this.currentPhotos" :loading="this.loading" class="m-4 p-4" />
+      <Pagination
+        :photosPerPage="this.photosPerPage"
+        :totalPhotos="this.photos.length"
+        :paginate="this.paginate"
+        :getPhotos="this.getCurrentPhotos"
+      />
     </div>
   </div>
 </template>
@@ -35,18 +44,21 @@
 <script>
 import axios from 'axios'
 import Photos from './Photos'
+import Pagination from './Pagination'
 
 export default {
   name: 'SearchForm',
   components: {
     Photos,
+    Pagination,
   },
   data() {
     return {
       rover: '',
       sol: '',
-      loading: false,
+      loading: true,
       photos: [],
+      currentPhotos: [],
       currentPage: 1,
       photosPerPage: 25,
     }
@@ -59,9 +71,19 @@ export default {
           `https://mars-photos.herokuapp.com/api/v1/rovers/${this.rover}/photos?sol=${this.sol}`
         )
         this.photos = res.data.photos
+        this.loading = false
+        this.getCurrentPhotos()
       } catch (err) {
         console.log(err)
       }
+    },
+    getCurrentPhotos() {
+      const lastIndex = this.currentPage * this.photosPerPage
+      const firstIndex = lastIndex - this.photosPerPage
+      this.currentPhotos = this.photos.slice(firstIndex, lastIndex)
+    },
+    paginate(number) {
+      this.currentPage = number
     },
   },
 }

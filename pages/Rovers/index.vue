@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col justify-between items-center p-10 lg:flex-row space-y-12 lg:space-y-0 lg:space-x-12 overflow-auto"
+    class="flex flex-col justify-between items-center p-10 lg:flex-row space-y-12 lg:space-y-0 lg:space-x-12 lg:h-screen overflow-auto"
   >
     <Curiosity />
     <Opportunity />
