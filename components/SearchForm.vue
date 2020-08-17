@@ -32,6 +32,7 @@
     <div v-else class="flex flex-col h-screen">
       <Photos :photos="this.currentPhotos" :loading="this.loading" class="m-4 p-4" />
       <Pagination
+        class="static"
         :photosPerPage="this.photosPerPage"
         :totalPhotos="this.photos.length"
         :paginate="this.paginate"

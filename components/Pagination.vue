@@ -1,5 +1,5 @@
 <template>
-  <nav class="flex static bg-black bg-opacity-75 w-screen px-2 items-center justify-center">
+  <nav class="flex bg-black bg-opacity-75 w-screen px-2 items-center justify-center">
     <ul class="flex items-center justify-center">
       <li
         v-bind:key="page"
