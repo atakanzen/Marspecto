@@ -1,20 +1,14 @@
 <template>
-  <div class="flex justify-start items-center">
-    <img
-      class="object-cover h-screen w-screen"
-      style="filter: brightness(60%)"
-      src="../static/img/cover.jpg"
-      alt="Curiosity on Mars"
-    />
+  <div class="flex justify-start items-center h-screen">
     <div class="label md:pl-20 divide-y">
       <div class="welcome text-5xl">Welcome to Marspecto.</div>
-      <div class="welcome text-4xl">satisfy your curiosity</div>
+      <div class="welcome text-4xl">Satisfy your curiosity</div>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {};
 </script>
 
 <style>

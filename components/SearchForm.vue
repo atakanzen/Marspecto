@@ -7,7 +7,7 @@
           <select
             name="rover"
             id="rover"
-            class="rover-select w-1/2 focus:outline-none focus:border-orange-500"
+            class="rover-select w-1/2 focus:outline-none focus:border-orange-500 lg:appearance-none"
             v-model="rover"
           >
             <option value="curiosity">Curiosity</option>
@@ -42,51 +42,51 @@
 </template>
 
 <script>
-import axios from 'axios'
-import Photos from './Photos'
-import Pagination from './Pagination'
+import axios from "axios";
+import Photos from "./Photos";
+import Pagination from "./Pagination";
 
 export default {
-  name: 'SearchForm',
+  name: "SearchForm",
   components: {
     Photos,
     Pagination,
   },
   data() {
     return {
-      rover: '',
-      sol: '',
+      rover: "",
+      sol: "",
       loading: true,
       photos: [],
       currentPhotos: [],
       currentPage: 1,
       photosPerPage: 25,
-    }
+    };
   },
   methods: {
     async getPhotos() {
       try {
-        this.loading = true
+        this.loading = true;
         const res = await axios.get(
           `https://mars-photos.herokuapp.com/api/v1/rovers/${this.rover}/photos?sol=${this.sol}`
-        )
-        this.photos = res.data.photos
-        this.loading = false
-        this.getCurrentPhotos()
+        );
+        this.photos = res.data.photos;
+        this.loading = false;
+        this.getCurrentPhotos();
       } catch (err) {
-        console.log(err)
+        console.log(err);
       }
     },
     getCurrentPhotos() {
-      const lastIndex = this.currentPage * this.photosPerPage
-      const firstIndex = lastIndex - this.photosPerPage
-      this.currentPhotos = this.photos.slice(firstIndex, lastIndex)
+      const lastIndex = this.currentPage * this.photosPerPage;
+      const firstIndex = lastIndex - this.photosPerPage;
+      this.currentPhotos = this.photos.slice(firstIndex, lastIndex);
     },
     paginate(number) {
-      this.currentPage = number
+      this.currentPage = number;
     },
   },
-}
+};
 </script>
 
 <style scoped>
@@ -99,7 +99,7 @@ export default {
 }
 
 .rover-select {
-  @apply appearance-none text-center tracking-widest font-light;
+  @apply text-center tracking-widest font-light;
 }
 
 .sol-input {
