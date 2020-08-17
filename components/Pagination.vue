@@ -1,5 +1,5 @@
 <template>
-  <nav class="flex bg-black space bg-opacity-75 w-screen px-2 items-center justify-center">
+  <nav class="flex static bg-black bg-opacity-75 w-screen px-2 items-center justify-center">
     <ul class="flex items-center justify-center">
       <li
         v-bind:key="page"
@@ -14,12 +14,12 @@
 
 <script>
 export default {
-  name: 'Pagination',
-  props: ['photosPerPage', 'totalPhotos', 'paginate', 'getPhotos'],
+  name: "Pagination",
+  props: ["photosPerPage", "totalPhotos", "paginate", "getPhotos"],
   data() {
     return {
       pageNumbers: [],
-    }
+    };
   },
 
   created() {
@@ -28,10 +28,10 @@ export default {
       i <= Math.ceil(this.$props.totalPhotos / this.$props.photosPerPage);
       i++
     ) {
-      this.pageNumbers.push(i)
+      this.pageNumbers.push(i);
     }
   },
-}
+};
 </script>
 
 <style>
