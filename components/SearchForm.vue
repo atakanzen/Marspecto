@@ -29,7 +29,7 @@
         </form>
       </div>
     </div>
-    <div v-else class="flex flex-col h-screen">
+    <div v-else class="flex flex-col h-screen relative">
       <Photos :photos="this.currentPhotos" :loading="this.loading" class="m-4 p-4" />
       <Pagination
         class="static"
