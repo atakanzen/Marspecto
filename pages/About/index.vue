@@ -1,6 +1,6 @@
 <template>
-  <div class="flex items-center justify-center">
-    <div class="flex w-1/2 justify-center items-center h-screen">
+  <div class="flex items-center justify-center h-screen overflow-auto">
+    <div class="static">
       <div class="bg-black bg-opacity-75 p-16 rounded">
         <div class="font-hairline tracking-wider text-xl text-white p-2 leading-relaxed">
           Ever wondered what is going on at Mars right now?
