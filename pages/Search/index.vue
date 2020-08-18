@@ -5,8 +5,8 @@
 </template>
 
 <script>
-import axios from 'axios'
-import SearchForm from '../../components/SearchForm'
+import axios from "axios";
+import SearchForm from "../../components/SearchForm";
 
 export default {
   components: {
@@ -14,17 +14,17 @@ export default {
   },
   head() {
     return {
-      title: 'Marspecto | Search',
+      title: "Marspecto | Search",
       meta: [
         {
-          hid: 'description',
-          name: 'description',
+          hid: "description",
+          name: "description",
           content: "Search photos that's been taken on Mars by NASA rovers",
         },
       ],
-    }
+    };
   },
-}
+};
 </script>
 
 <style scoped>

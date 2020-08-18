@@ -29,9 +29,10 @@
         </form>
       </div>
     </div>
-    <div v-else class="flex flex-col h-screen">
-      <Photos :photos="this.currentPhotos" :loading="this.loading" class="p-4" />
+    <div v-else class="flex flex-col h-screen space-y-2">
+      <Photos :photos="this.currentPhotos" :loading="this.loading" class="static mt-2" />
       <Pagination
+        class="static"
         :photosPerPage="this.photosPerPage"
         :totalPhotos="this.photos.length"
         :paginate="this.paginate"

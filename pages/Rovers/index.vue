@@ -9,29 +9,29 @@
 </template>
 
 <script>
-import Curiosity from '../../components/Curiosity'
-import Opportunity from '../../components/Opportunity'
-import Spirit from '../../components/Spirit'
+import Curiosity from "../../components/Curiosity";
+import Opportunity from "../../components/Opportunity";
+import Spirit from "../../components/Spirit";
 
 export default {
   head() {
     return {
-      title: 'Marspecto | Rovers',
+      title: "Marspecto | Rovers",
       meta: [
         {
-          hid: 'description',
-          name: 'description',
+          hid: "description",
+          name: "description",
           content: "NASA rovers that's been sent to MARS.",
         },
       ],
-    }
+    };
   },
   components: {
     Curiosity,
     Opportunity,
     Spirit,
   },
-}
+};
 </script>
 
 <style>
