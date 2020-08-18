@@ -1,6 +1,6 @@
 <template>
-  <nav class="flex bg-black bg-opacity-75 w-screen px-2 items-center justify-center">
-    <ul class="flex items-center justify-center">
+  <nav class="flex bg-black bg-opacity-75 w-screen items-center justify-center">
+    <ul class="flex">
       <li
         v-bind:key="page"
         v-for="page in this.pageNumbers"
