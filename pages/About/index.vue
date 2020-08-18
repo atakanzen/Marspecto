@@ -23,6 +23,18 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: "Marspecto | About",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "About website and author.",
+        },
+      ],
+    };
+  },
   name: "About",
 };
 </script>
