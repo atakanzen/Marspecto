@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-if="this.photos.length === 0">
-      <div class="flex flex-col w-screen items-center h-screen">
+      <div class="flex flex-col w-screen items-center justify-center h-screen">
         <form v-on:submit.prevent="getPhotos" class="search-form lg:w-1/2 w-screen space-y-2">
           <label for="rover" class="form-label">Rover</label>
           <select
