@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-center items-center h-screen static overflow-auto space-y-1">
+  <div class="flex justify-center items-center static overflow-auto space-y-1">
     <SearchForm />
   </div>
 </template>
