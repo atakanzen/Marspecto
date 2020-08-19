@@ -1,5 +1,5 @@
 <template>
-  <nav class="flex static bg-black bg-opacity-75 w-screen items-center justify-center">
+  <div class="flex static bg-black bg-opacity-75 w-screen items-center justify-center">
     <ul class="flex">
       <li
         v-bind:key="page"
@@ -9,7 +9,7 @@
         <button v-on:click="paginate(page), getPhotos()" type="click">{{ page }}</button>
       </li>
     </ul>
-  </nav>
+  </div>
 </template>
 
 <script>
