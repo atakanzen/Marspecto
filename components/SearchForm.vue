@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-if="this.photos.length === 0">
-      <div class="flex flex-col w-screen items-center">
+      <div class="flex flex-col w-screen items-center h-screen">
         <form v-on:submit.prevent="getPhotos" class="search-form lg:w-1/2 w-screen space-y-2">
           <label for="rover" class="form-label">Rover</label>
           <select
@@ -29,7 +29,7 @@
         </form>
       </div>
     </div>
-    <div v-else class="flex flex-col space-y-2 static overflow-auto">
+    <div v-else class="flex flex-col space-y-2 static overflow-aut">
       <Photos :photos="this.currentPhotos" :loading="this.loading" class="mt-2" />
       <Pagination
         :photosPerPage="this.photosPerPage"
