@@ -9,7 +9,7 @@
             href="https://api.nasa.gov/"
             target="_blank"
             class="font-medium"
-          >NASA { APIs }</a> I was able to use their data. So here it goes, a database full of Martian mission photos by the NASA rovers. You can always contact me from my
+          >NASA { APIs }</a> I was able to use their data. So here it goes, a website that can access a database full of Martian mission photos by the NASA rovers. You can always contact me from my
           <a
             href="https://twitter.com/atakanzzengin"
             target="_blank"
