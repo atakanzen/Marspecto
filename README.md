@@ -1,5 +1,5 @@
 # Marspecto
----
+
  A **Vue.js** project, that helps to search all of the photos that was taken on Mars by the NASA rovers.
 
 Kudos to **[NASA{ APIs }](https://api.nasa.gov/)** for their awesome APIs.
