@@ -10,3 +10,6 @@ Kudos to **[NASA{ APIs }](https://api.nasa.gov/)** for their awesome APIs.
  - You can see all the photos that they took on the exact Sol that you've searched for.
 
 **Check the website from [here](https://marspecto.netlify.app)**
+
+## Blog
+There is a blog post that I have written about Marspecto as well, you can read it from [here](https://atakanzen.com/blog/marspecto).
